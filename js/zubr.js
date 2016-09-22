@@ -1,5 +1,5 @@
 var code={
-	text:     '  print a print b print 10',
+	text:     '  print ( 1 + 2 ) + 3 print b print 10',
 	position: 0
 }
 

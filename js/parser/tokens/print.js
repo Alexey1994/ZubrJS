@@ -1,13 +1,16 @@
 function parse_print_token(parser)
 {
 	var expression
-	
-	console.log('print')
 
 	do
 	{
 		parser.skip()
 		expression=parse_expression(parser)
+
+		console.log(expression)
+
+		if(!expression)
+			return true
 
 		parser.body.push({
 			type: PRINT,
