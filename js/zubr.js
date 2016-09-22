@@ -1,25 +1,31 @@
-var code={
-	text:     '  print ( 1 + 2 ) + 3 print b print 10',
-	position: 0
-}
+var text=document.getElementById('code')
 
 
-function end_of_data(code)
+function run_zubr()
 {
-	if(code.position>code.text.length)
-		return true
+	var code={
+		text:     text.value,//     '  print ( 1 + 2 ) + 3 print b print 10',
+		position: 0
+	}
 
-	return false
+
+	function end_of_data(code)
+	{
+		if(code.position>code.text.length)
+			return true
+
+		return false
+	}
+
+
+	function get_byte(code)
+	{
+		byte=code.text[code.position]
+		code.position++
+
+		return byte
+	}
+
+
+	parse(code, get_byte, end_of_data)
 }
-
-
-function get_byte(code)
-{
-	byte=code.text[code.position]
-	code.position++
-
-	return byte
-}
-
-
-parse(code, get_byte, end_of_data)

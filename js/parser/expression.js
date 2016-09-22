@@ -106,7 +106,7 @@ function parse_expression(parser)
 			{
 				if(parser.head===unary_operations[i])
 				{
-					add_operation(parser.head.charCodeAt())
+					add_operation(parser.head)
 					is_unary_operation=true
 				}
 			}
@@ -181,7 +181,7 @@ function parse_expression(parser)
 							return undefined
 						}
 
-						add_operation(binary_operations[i].charCodeAt())
+						add_operation(binary_operations[i])
 
 						parser.get_byte()
 

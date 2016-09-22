@@ -1,15 +1,5 @@
-var tokens={
+const tokens={
 	'print': parse_print_token
-}
-
-
-function create_parser(source, get_byte, end_of_data)
-{
-	return {
-		source:      source,
-		get_byte:    get_byte,
-		end_of_data: end_of_data
-	}	
 }
 
 
